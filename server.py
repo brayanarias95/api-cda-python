@@ -2,7 +2,6 @@ import os
 from flask import Flask, send_from_directory, render_template, redirect, jsonify
 from datetime import datetime
 import psycopg2
-from dotenv import load_dotenv
 
 app = Flask(__name__)
 
