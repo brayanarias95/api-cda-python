@@ -15,10 +15,10 @@ def verificar_expiracion(fecha):
 
 def obtener_fecha_expiracion_por_nombre(name):
     conn = psycopg2.connect(
-        dbname=os.getenv('dbname'),
-        user=os.getenv('user'),
-        password=os.getenv('password'),
-        host=os.getenv('host')
+        dbname=os.environ.get('dbname'),
+        user=os.environ.get('user'),
+        password=os.environ.get('password'),
+        host=os.environ.get('host')
     )
     cursor = conn.cursor()
     cursor.execute("SELECT exp_date FROM licencias_cda WHERE name = %s", (name,))
