@@ -1,5 +1,5 @@
 import os
-from flask import Flask, send_from_directory, render_template, redirect, jsonify
+from flask import Flask, request, jsonify
 from datetime import datetime
 import psycopg2
 
